@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Recipe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 text-center">Create a New Recipe</h1>
+        <form method="POST" class="mt-4">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select name="category" id="category" class="form-control" required>
+                    <option value="Appetizer">Appetizer</option>
+                    <option value="Main Course">Main Course</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="preparation_time">Preparation Time (minutes):</label>
+                <input type="number" name="preparation_time" id="preparation_time" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <textarea name="ingredients" id="ingredients" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="instructions">Instructions:</label>
+                <textarea name="instructions" id="instructions" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Save Recipe</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Recipes</a>
+        </form>
+    </div>
+</body>
+</html>
